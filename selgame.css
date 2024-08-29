@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Righteous&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.3s;
+}
+
+.title {
+    font-family: 'Righteous', cursive;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #00ffcc; /* Cyan color for the title */
+    margin-bottom: 30px;
+    animation: slideInLeft 1s forwards;
+}
+
+.subtitle {
+    font-family: 'Righteous', cursive;
+    font-size: 3rem;
+    color: #ff0066; /* Pinkish-red color */
+    margin-top: 50px;
+    margin-bottom: 30px;
+    animation: slideInLeft 1.5s forwards;
+}
+
+.cpu-build ul,
+.engineering-works {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.8rem;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+    animation: slideInRight 1.3s forwards;
+}
+
+.cpu-build li,
+.engineering-works li {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-left: 5px solid #00ffcc;
+    background-color: #1f1f1f;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.cpu-build li strong {
+    font-weight: bold;
+    color: #00ffcc;
+}
+
+.cpu-build li:hover,
+.engineering-works li:hover {
+    background-color: #292929;
+    transform: translateX(10px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}

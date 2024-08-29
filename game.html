@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Build Game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="game-container">
+        <audio id="bg-music" loop>
+            <source src="separation-185196.mp3" type="audio/mp3">
+        </audio>
+        <audio id="component-drop-sound">
+            <source src="whoosh-clothing-drag-42291.mp3" type="audio/mp3">
+        </audio>
+        <audio id="success-sound">
+            <source src="success-1-6297.mp3" type="audio/mp3">
+        </audio>
+
+        <div class="motherboard">
+            <img src="motherbord-removebg-preview.png" alt="Motherboard">
+            <div id="processor-slot" class="drop-slot"></div>
+            <div id="ram-slot" class="drop-slot"></div>
+        </div>
+        <div class="components">
+            <img id="processor" src="processor.png" alt="Processor" draggable="true" class="draggable">
+            <img id="ram" src="RAM.jpg" alt="RAM" draggable="true" class="draggable">
+        </div>
+        <!-- Add onclick event for redirection -->
+        <button id="next-level" onclick="redirectToNextLevel()" disabled>Next Level</button>
+    </div>
+
+    <script src="game.js"></script>
+    <script>
+        function redirectToNextLevel() {
+            window.location.href = "selgame.html";  // Redirects to selgame.html
+        }
+    </script>
+</body>
+</html>
+
